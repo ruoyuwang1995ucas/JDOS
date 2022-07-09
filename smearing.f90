@@ -12,15 +12,10 @@ contains
         blk_2=1/(2*sig**2)
     end subroutine
 
-
     function gaussian(x,blk_1,blk_2) result(g)
         implicit none
         real(kind=8),intent(in) :: x,blk_1,blk_2
         real(kind=8):: g
-
         g=exp(-x**2*blk_2)*blk_1
-
     end function
-
-
 end module
